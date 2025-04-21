@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rick_and_morty/modules/characters/data/model/repository/characters_list_repository.dart';
 import 'package:rick_and_morty/modules/characters/domain/entity/characters_entity.dart';
+import 'package:rick_and_morty/modules/characters/presentation/pages/screen_details/custom_bottom_navigator_bar.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -122,30 +123,7 @@ class _HomeScreenState extends State<HomeScreen> {
           },
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: const Color(0xff152A3A),
-        selectedItemColor: Color(0xff43D049),
-        unselectedItemColor: Color(0xff5B6975),
-        type: BottomNavigationBarType.fixed,
-        items: [
-          BottomNavigationBarItem(
-            icon: Image.asset('assets/ghost.png', width: 20, height: 18.8),
-            label: 'Characters',
-          ),
-          BottomNavigationBarItem(
-            icon: Image.asset('assets/planet.png', width: 20, height: 18.8),
-            label: 'Locations',
-          ),
-          BottomNavigationBarItem(
-            icon: Image.asset('assets/episode.png', width: 20, height: 18.8),
-            label: 'Episodes',
-          ),
-          BottomNavigationBarItem(
-            icon: Image.asset('assets/settings.png', width: 20, height: 18.8),
-            label: 'Settings',
-          ),
-        ],
-      ),
+      bottomNavigationBar: CustomBottomNavigatorBar(),
     );
   }
 
